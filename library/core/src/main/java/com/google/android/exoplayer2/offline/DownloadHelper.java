@@ -415,12 +415,12 @@ public final class DownloadHelper {
   /**
    * Equivalent to {@link #createMediaSource(DownloadRequest, Factory, DrmSessionManager)
    * createMediaSource(downloadRequest, dataSourceFactory,
-   * DrmSessionManager.getDummyDrmSessionManager())}.
+   * DrmSessionManager.DUMMY)}.
    */
   public static MediaSource createMediaSource(
       DownloadRequest downloadRequest, DataSource.Factory dataSourceFactory) {
     return createMediaSource(
-        downloadRequest, dataSourceFactory, DrmSessionManager.getDummyDrmSessionManager());
+        downloadRequest, dataSourceFactory, DrmSessionManager.DUMMY);
   }
 
   /**

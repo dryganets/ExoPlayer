@@ -156,7 +156,7 @@ public class FakeAdaptiveMediaPeriod extends FakeMediaPeriod
         /* callback= */ this,
         allocator,
         /* positionUs= */ 0,
-        /* drmSessionManager= */ DrmSessionManager.getDummyDrmSessionManager(),
+        /* drmSessionManager= */ DrmSessionManager.DUMMY,
         new DefaultLoadErrorHandlingPolicy(/* minimumLoadableRetryCount= */ 3),
         eventDispatcher);
   }

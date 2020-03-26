@@ -101,7 +101,7 @@ public final class SsMediaSource extends BaseMediaSource
         @Nullable DataSource.Factory manifestDataSourceFactory) {
       this.chunkSourceFactory = Assertions.checkNotNull(chunkSourceFactory);
       this.manifestDataSourceFactory = manifestDataSourceFactory;
-      drmSessionManager = DrmSessionManager.getDummyDrmSessionManager();
+      drmSessionManager = DrmSessionManager.DUMMY;
       loadErrorHandlingPolicy = new DefaultLoadErrorHandlingPolicy();
       livePresentationDelayMs = DEFAULT_LIVE_PRESENTATION_DELAY_MS;
       compositeSequenceableLoaderFactory = new DefaultCompositeSequenceableLoaderFactory();
@@ -405,7 +405,7 @@ public final class SsMediaSource extends BaseMediaSource
         /* manifestParser= */ null,
         chunkSourceFactory,
         new DefaultCompositeSequenceableLoaderFactory(),
-        DrmSessionManager.getDummyDrmSessionManager(),
+        DrmSessionManager.DUMMY,
         new DefaultLoadErrorHandlingPolicy(minLoadableRetryCount),
         DEFAULT_LIVE_PRESENTATION_DELAY_MS,
         /* tag= */ null);
@@ -506,7 +506,7 @@ public final class SsMediaSource extends BaseMediaSource
         manifestParser,
         chunkSourceFactory,
         new DefaultCompositeSequenceableLoaderFactory(),
-        DrmSessionManager.getDummyDrmSessionManager(),
+        DrmSessionManager.DUMMY,
         new DefaultLoadErrorHandlingPolicy(minLoadableRetryCount),
         livePresentationDelayMs,
         /* tag= */ null);

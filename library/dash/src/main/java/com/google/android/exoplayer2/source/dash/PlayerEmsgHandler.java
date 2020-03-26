@@ -284,7 +284,7 @@ public final class PlayerEmsgHandler implements Handler.Callback {
     private final MetadataInputBuffer buffer;
 
     /* package */ PlayerTrackEmsgHandler(Allocator allocator) {
-      this.sampleQueue = new SampleQueue(allocator, DrmSessionManager.getDummyDrmSessionManager());
+      this.sampleQueue = new SampleQueue(allocator, DrmSessionManager.DUMMY);
       formatHolder = new FormatHolder();
       buffer = new MetadataInputBuffer();
     }

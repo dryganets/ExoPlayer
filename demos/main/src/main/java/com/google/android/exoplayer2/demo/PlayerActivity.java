@@ -480,7 +480,7 @@ public class PlayerActivity extends AppCompatActivity
     int errorStringId = R.string.error_drm_unknown;
     DrmSessionManager<ExoMediaCrypto> drmSessionManager = null;
     if (drmInfo == null) {
-      drmSessionManager = DrmSessionManager.getDummyDrmSessionManager();
+      drmSessionManager = DrmSessionManager.DUMMY;
     } else if (Util.SDK_INT < 18) {
       errorStringId = R.string.error_drm_unsupported_before_api_18;
     } else if (!MediaDrm.isCryptoSchemeSupported(drmInfo.drmScheme)) {
@@ -622,7 +622,7 @@ public class PlayerActivity extends AppCompatActivity
           new MediaSourceFactory() {
 
             private DrmSessionManager<?> drmSessionManager =
-                DrmSessionManager.getDummyDrmSessionManager();
+                DrmSessionManager.DUMMY;
 
             @Override
             public MediaSourceFactory setDrmSessionManager(DrmSessionManager<?> drmSessionManager) {

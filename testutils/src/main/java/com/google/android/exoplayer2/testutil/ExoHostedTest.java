@@ -230,7 +230,7 @@ public abstract class ExoHostedTest implements AnalyticsListener, HostedTest {
 
   protected DrmSessionManager<FrameworkMediaCrypto> buildDrmSessionManager(String userAgent) {
     // Do nothing. Interested subclasses may override.
-    return DrmSessionManager.getDummyDrmSessionManager();
+    return DrmSessionManager.DUMMY;
   }
 
   protected DefaultTrackSelector buildTrackSelector(HostActivity host) {

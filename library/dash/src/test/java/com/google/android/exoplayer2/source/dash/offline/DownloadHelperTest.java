@@ -40,7 +40,7 @@ public final class DownloadHelperTest {
         Uri.parse("http://uri"),
         new FakeDataSource.Factory(),
         (handler, videoListener, audioListener, text, metadata, drm) -> new Renderer[0],
-        /* drmSessionManager= */ DrmSessionManager.getDummyDrmSessionManager(),
+        /* drmSessionManager= */ DrmSessionManager.DUMMY,
         DownloadHelper.DEFAULT_TRACK_SELECTOR_PARAMETERS_WITHOUT_VIEWPORT);
   }
 }

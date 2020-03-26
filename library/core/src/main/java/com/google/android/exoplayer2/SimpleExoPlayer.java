@@ -38,6 +38,7 @@ import com.google.android.exoplayer2.audio.AuxEffectInfo;
 import com.google.android.exoplayer2.decoder.DecoderCounters;
 import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
 import com.google.android.exoplayer2.drm.DrmSessionManager;
+import com.google.android.exoplayer2.drm.DummyDrmSessionManager;
 import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.metadata.Metadata;
 import com.google.android.exoplayer2.metadata.MetadataOutput;
@@ -379,7 +380,7 @@ public class SimpleExoPlayer extends BasePlayer
         renderersFactory,
         trackSelector,
         loadControl,
-        DrmSessionManager.getDummyDrmSessionManager(),
+        DummyDrmSessionManager.getDummy(),
         bandwidthMeter,
         analyticsCollector,
         clock,

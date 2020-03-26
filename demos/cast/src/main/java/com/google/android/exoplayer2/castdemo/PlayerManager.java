@@ -407,7 +407,7 @@ import java.util.Map;
     }
 
     DrmSessionManager<ExoMediaCrypto> drmSessionManager =
-        DrmSessionManager.getDummyDrmSessionManager();
+        DrmSessionManager.DUMMY;
     MediaItem.DrmConfiguration drmConfiguration = item.drmConfiguration;
     if (drmConfiguration != null && Util.SDK_INT >= 18) {
       String licenseServerUrl =

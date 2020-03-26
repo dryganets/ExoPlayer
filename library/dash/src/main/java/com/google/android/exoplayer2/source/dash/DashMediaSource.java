@@ -115,7 +115,7 @@ public final class DashMediaSource extends BaseMediaSource {
         @Nullable DataSource.Factory manifestDataSourceFactory) {
       this.chunkSourceFactory = Assertions.checkNotNull(chunkSourceFactory);
       this.manifestDataSourceFactory = manifestDataSourceFactory;
-      drmSessionManager = DrmSessionManager.getDummyDrmSessionManager();
+      drmSessionManager = DrmSessionManager.DUMMY;
       loadErrorHandlingPolicy = new DefaultLoadErrorHandlingPolicy();
       livePresentationDelayMs = DEFAULT_LIVE_PRESENTATION_DELAY_MS;
       compositeSequenceableLoaderFactory = new DefaultCompositeSequenceableLoaderFactory();
@@ -465,7 +465,7 @@ public final class DashMediaSource extends BaseMediaSource {
         /* manifestParser= */ null,
         chunkSourceFactory,
         new DefaultCompositeSequenceableLoaderFactory(),
-        DrmSessionManager.getDummyDrmSessionManager(),
+        DrmSessionManager.DUMMY,
         new DefaultLoadErrorHandlingPolicy(minLoadableRetryCount),
         DEFAULT_LIVE_PRESENTATION_DELAY_MS,
         /* livePresentationDelayOverridesManifest= */ false,
@@ -579,7 +579,7 @@ public final class DashMediaSource extends BaseMediaSource {
         manifestParser,
         chunkSourceFactory,
         new DefaultCompositeSequenceableLoaderFactory(),
-        DrmSessionManager.getDummyDrmSessionManager(),
+        DrmSessionManager.DUMMY,
         new DefaultLoadErrorHandlingPolicy(minLoadableRetryCount),
         livePresentationDelayMs == DEFAULT_LIVE_PRESENTATION_DELAY_PREFER_MANIFEST_MS
             ? DEFAULT_LIVE_PRESENTATION_DELAY_MS

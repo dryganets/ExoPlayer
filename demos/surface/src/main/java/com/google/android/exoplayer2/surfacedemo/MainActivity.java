@@ -198,7 +198,7 @@ public final class MainActivity extends Activity {
               .setUuidAndExoMediaDrmProvider(drmSchemeUuid, FrameworkMediaDrm.DEFAULT_PROVIDER)
               .build(drmCallback);
     } else {
-      drmSessionManager = DrmSessionManager.getDummyDrmSessionManager();
+      drmSessionManager = DrmSessionManager.DUMMY;
     }
 
     DataSource.Factory dataSourceFactory =

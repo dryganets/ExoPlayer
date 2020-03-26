@@ -77,7 +77,7 @@ public final class ProgressiveMediaSource extends BaseMediaSource
     public Factory(DataSource.Factory dataSourceFactory, ExtractorsFactory extractorsFactory) {
       this.dataSourceFactory = dataSourceFactory;
       this.extractorsFactory = extractorsFactory;
-      drmSessionManager = DrmSessionManager.getDummyDrmSessionManager();
+      drmSessionManager = DrmSessionManager.DUMMY;
       loadErrorHandlingPolicy = new DefaultLoadErrorHandlingPolicy();
       continueLoadingCheckIntervalBytes = DEFAULT_LOADING_CHECK_INTERVAL_BYTES;
     }

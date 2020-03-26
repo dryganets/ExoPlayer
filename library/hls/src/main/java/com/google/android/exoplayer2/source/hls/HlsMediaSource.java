@@ -124,7 +124,7 @@ public final class HlsMediaSource extends BaseMediaSource
       playlistParserFactory = new DefaultHlsPlaylistParserFactory();
       playlistTrackerFactory = DefaultHlsPlaylistTracker.FACTORY;
       extractorFactory = HlsExtractorFactory.DEFAULT;
-      drmSessionManager = DrmSessionManager.getDummyDrmSessionManager();
+      drmSessionManager = DrmSessionManager.DUMMY;
       loadErrorHandlingPolicy = new DefaultLoadErrorHandlingPolicy();
       compositeSequenceableLoaderFactory = new DefaultCompositeSequenceableLoaderFactory();
       metadataType = METADATA_TYPE_ID3;

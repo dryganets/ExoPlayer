@@ -117,7 +117,7 @@ public final class DashMediaPeriodTest {
                 periodIndex,
                 mock(DashChunkSource.Factory.class),
                 mock(TransferListener.class),
-                DrmSessionManager.getDummyDrmSessionManager(),
+                DrmSessionManager.DUMMY,
                 mock(LoadErrorHandlingPolicy.class),
                 new EventDispatcher()
                     .withParameters(

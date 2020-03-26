@@ -259,7 +259,7 @@ import java.util.List;
     protected DrmSessionManager<FrameworkMediaCrypto> buildDrmSessionManager(
         final String userAgent) {
       if (widevineLicenseUrl == null) {
-        return DrmSessionManager.getDummyDrmSessionManager();
+        return DrmSessionManager.DUMMY;
       }
       try {
         MediaDrmCallback drmCallback = new HttpMediaDrmCallback(widevineLicenseUrl,
